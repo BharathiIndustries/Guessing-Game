@@ -1,0 +1,32 @@
+from random import randint as r
+
+print("let's play the number guessing game")
+print("*"*50)
+print("""level of difficulty
+level(1)- Easy
+level(2)- Medium
+level(3)- Hard
+      """)
+le = int(input("Enter the level number you want to play :"))
+print("*"*50)
+
+if le == 1:
+    y,z = 1,10
+    print("Guess numbers between 1 to 10")
+elif le == 2:
+    y,z = 1,50
+    print("Guess numbers between 1 to 50")
+elif le == 3:
+    y,z = 1,100
+    print("Guess numbers between 1 to 100")
+
+x = int(input("Enter your number :"))
+c = r(y,z)
+print("Computers number :",c)
+
+while c != x:
+    x = int(input("Enter your number :"))
+    c = r(y,z)
+    print("Computers number :",c)
+
+print("Great you have guessed it correct")
